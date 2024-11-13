@@ -2,3 +2,90 @@
   padding: 0;
   margin: 0;
 }
+
+#home-navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 6vh;
+  padding: 4vh 5vw;
+}
+#home-navbar-divlogo{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  
+}
+#home-navbar-divlogo-img{
+  height: 100%;
+  border-radius: 20px;
+  
+}
+.button{
+  padding: 10px 20px;
+  border: 2px solid green;
+  color: green;
+  background-color: transparent;
+  border-radius: 10px;
+  transition-duration: 200ms;
+  transition-property: all;
+}
+.button:hover{
+  background-color: green;
+  color: white;
+  border-color: white;
+}
+
+
+/* login page */
+#login,#signup{
+  border: 2px solid green;
+  padding: 5% 5%;
+  height: 43vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 20%;
+  margin: 14vh auto;
+  background-color: black;
+  border-radius: 20px;
+  
+}
+#login form,#signup form{
+  display: flex;
+  height: 25vh;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+#login form input,#signup form input{
+  padding: 10px 10px;
+  border-radius: 10px;
+  width: 17vw;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+}
+#login button #signup button{
+  width: 10vw;
+}
+#login img,#signup img{
+   height: 6vh;
+   border-radius: 20px;
+   border: 2px solid white;
+}
+#login-signup,#signup-login{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+hr{
+  width: 100%;
+}
+
+
+
