@@ -1,3 +1,4 @@
+import './home_comp.css';
 import { useNavigate } from "react-router-dom"
 const OpenAccount=()=>{
     const navigate = useNavigate();
