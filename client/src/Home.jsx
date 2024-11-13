@@ -1,7 +1,8 @@
-import bull_img from '/bull-removebg-preview.png';
+// import bull_img from '/bull-removebg-preview.png';
 import { useNavigate } from 'react-router-dom';
+import Hero from './home_comp/Hero.jsx'
+import Stats from './home_comp/Stats.jsx'
 import logo from '/bullrun_logo.png';
-// import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css'
 const Home=()=>{
     const navigate = useNavigate();
@@ -17,7 +18,9 @@ const Home=()=>{
         </div>      
       <button type="button" id='home-navbar-button' className='button' onClick={navToLogin}>LogIn/SignUp</button>
       </div>
+      <Hero/>
       
+      <Stats/>
         </>
     )
 }
