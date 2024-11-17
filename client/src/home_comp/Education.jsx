@@ -2,6 +2,7 @@ import './home_comp.css';
 const Education=()=>{
     return (
         <>
+<<<<<<< HEAD
         <div>
     <div> 
         <div>
@@ -12,6 +13,21 @@ const Education=()=>{
             <p>Varsity, the largest online stock market education book in the world covering everything from the basics to advanced trading.</p>
             <a href=''>Varsity <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
             <p>TradingQ&A, the most active trading and investment community in India for all your market related queries.</p>
+=======
+        <div id="open">
+    <div>
+        <div>
+            <img src='Images/education.svg'/>
+        </div>
+        
+            <h1>Free and open market education</h1>
+            <div id="card2">
+            <p>Varsity, the largest online stock market education book in the world covering everything from the basics to advanced trading.</p><br/>
+            <a href=''>Varsity <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+            </div>
+            <div id="card2">
+            <p>TradingQ&A, the most active trading and investment community in India for all your market related queries.</p><br/>
+>>>>>>> origin/main
             <a href=''>TradingQ&A <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
         </div>
     </div>
@@ -20,4 +36,8 @@ const Education=()=>{
         </>
     )
 }
+<<<<<<< HEAD
 export default Education;
+=======
+export default Education;
+>>>>>>> origin/main
