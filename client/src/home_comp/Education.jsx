@@ -3,7 +3,7 @@ const Education=()=>{
     return (
         <>
         <div>
-    <div>
+    <div> 
         <div>
             <img src='Images/education.svg'/>
         </div>
