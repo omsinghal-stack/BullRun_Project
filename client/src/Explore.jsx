@@ -5,6 +5,7 @@ import Loading_Spinner from '../components/Loading_Spinner';
 // import Dedicated from './explore_comp/Dedicated.jsx'
 const Explore = () => {
     const API = "https://financialmodelingprep.com/api/v3/stock/list?apikey=7tb1GX4qTBrrwWjhi0m97bdp2AVJES4g";
+    const API2 = "https://financialmodelingprep.com/api/v3/symbol/NASDAQ?apikey=7tb1GX4qTBrrwWjhi0m97bdp2AVJES4g";
     const [StockData, setStockData] = useState([]);
     const [EtfData, setEtfData] = useState([]);
     const [Trust, setTrust] = useState([]);
@@ -13,7 +14,7 @@ const Explore = () => {
     const getStockData = async () => {
         try {
             const res = await axios.get(API);
-
+            const res2 = await axios.get(API2)
             const st_filt = res.data.filter((st) => {
                 return st.exchangeShortName === 'NASDAQ' && st.type === 'stock'
             })
@@ -23,10 +24,38 @@ const Explore = () => {
             const etf_filt = res.data.filter((st) => {
                 return st.exchangeShortName === 'NASDAQ' && st.type === 'etf'
             })
+            const res_stock=[];
+            const res_etf=[];
+            const res_trust=[];
             
-            setStockData(st_filt);
-            setEtfData(etf_filt);
-            setTrust(tru_filt);
+            res2.data.forEach(item2=>{
+                const match = st_filt.find(item1=> item1.symbol === item2.symbol);
+                const match2 = tru_filt.find(item1=> item1.symbol === item2.symbol);
+                const match3 = etf_filt.find(item1=> item1.symbol === item2.symbol);
+                if(match){
+                    res_stock.push(item2)
+                }
+                if(match2){
+                    res_trust.push(item2);
+                }
+                if(match3){
+                    res_etf.push(item2);
+                }
+
+
+            })
+            console.log(res_stock);
+            console.log(res_trust);
+            console.log(res_etf);
+            const top_stocks_descending_merketCap = res_stock.sort((a,b)=>b.marketCap-a.marketCap)
+            const top_trusts_descending_merketCap = res_trust.sort((a,b)=>b.marketCap-a.marketCap)
+            const top_etfs_descending_merketCap = res_etf.sort((a,b)=> b.marketCap-a.marketCap)
+            const top_15_stocks = top_stocks_descending_merketCap.slice(0,15);
+            const top_15_trusts = top_trusts_descending_merketCap.slice(0,15);
+            const top_15_etfs = top_etfs_descending_merketCap.slice(0,15);
+            setStockData(top_15_stocks);
+            setEtfData(top_15_etfs);   
+            setTrust(top_15_trusts);
             setLoading(false);
         } catch (err) {
             console.log(err);
@@ -52,6 +81,16 @@ const Explore = () => {
                                 <p>{st.name}</p>
                                 <h3>{st.price}</h3>
                             </div>
+                        ))}
+                    </div>
+                    <hr/>
+                    <div>
+                        {EtfData.map((etf,index)=>(
+                            <div className='card' key={index}>
+                            <h1>{etf.symbol}</h1>
+                            <p>{etf.name}</p>
+                            <h3>{etf.price}</h3>
+                        </div>
                         ))}
                     </div>
                 </>
