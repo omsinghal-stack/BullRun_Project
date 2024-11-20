@@ -77,14 +77,21 @@ const Dedicated_Stock = ()=>{
             Loading?
             (<Loading_Spinner/>):
             <>
+            <div className="section">
                 <h1>LargeCap</h1>
+                <div className="container">
              <div className="sect">
                 {Lar_Cap.map((st,index)=>(
                    <h1 key={index}>{st.symbol}</h1>
-                ))};
+                  
+                ))}
              </div>
-             <hr />
+             </div>
+             </div>
+             
+             <div className="section">
              <h1>SmallCap</h1>
+             <div className="container">
              <div className="sect">
                
                 {Sma_Cap.map((st,index)=>(
@@ -92,31 +99,45 @@ const Dedicated_Stock = ()=>{
                 ))
                 }
              </div>
-             <hr />
-                <h1>MidCapse</h1>
+             </div>
+             </div>
+             
+             <div className="section">
+                <h1>MidCap</h1>
+                <div className="container">
                 <div className="sect">
                 {Mid_Cap.map((st,index)=>(
                    <h1 key={index}>{st.symbol}</h1>
                 ))
                 }
              </div>
-             <hr />
-             <h1>top gainers</h1>
+             </div>
+             </div>
+             
+             <div className="section">
+             <h1>Top Gainers</h1>
+             <div className="container">
              <div className="sect">
                 {Gainer.map((st,index)=>(
                    <h1 key={index}>{st.symbol}</h1>
                 ))
                 }
              </div>
-             <hr />
-             <h1>top lossers</h1>
+             </div>
+             </div>
+
+             <div className="section">
+             <h1>Top Lossers</h1>
+             <div className="container">
              <div className="sect">
                 {Looser.map((st,index)=>(
                    <h1 key={index}>{st.symbol}</h1>
                 ))
                 }
              </div>
-             <hr />
+             </div>
+             </div>
+             
              
              
             </>
