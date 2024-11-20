@@ -2,12 +2,11 @@ import axios from 'axios'
 import { useEffect, useState } from 'react';
 import Services from './explore_comp/Services.jsx';
 import Loading_Spinner from '../components/Loading_Spinner';
-<<<<<<< HEAD
-import './Explore.css'
-=======
-import './Explore.css';
 
->>>>>>> origin/main
+import './Explore.css'
+
+
+
 const Explore = () => {
     const API = "https://financialmodelingprep.com/api/v3/stock/list?apikey=POx9PiDc9nnBzmbrjUtIVbmvLECjGQ45";
     const API2 = "https://financialmodelingprep.com/api/v3/symbol/NASDAQ?apikey=POx9PiDc9nnBzmbrjUtIVbmvLECjGQ45";
