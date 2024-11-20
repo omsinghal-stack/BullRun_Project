@@ -5,10 +5,7 @@ const Education = () => {
 
             <div id="open">
                 <div>
-                    <div>
-                        <img src='Images/education.svg' />
-                    </div>
-
+                    
                     <h1>Free and open market education</h1>
                     <div id="card2">
                         <p>Varsity, the largest online stock market education book in the world covering everything from the basics to advanced trading.</p><br />

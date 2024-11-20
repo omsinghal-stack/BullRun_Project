@@ -30,7 +30,7 @@ const Dedicated_Etf = () => {
                 res_etf.push(item2);
             }
         })
-        console.log(res_etf);
+        // console.log(res_etf);
         const high_mar_cap_etf = [...res_etf].sort((a, b) => b.marketCap - a.marketCap);
         const high_volume_etf = [...res_etf].sort((a, b) => b.avgVolume - a.avgVolume);
         const top_perform = [...res_etf].sort((a, b) => b.changesPercentage - a.changesPercentage);
@@ -60,6 +60,27 @@ const Dedicated_Etf = () => {
                                 <h1 key={index}>{et.symbol}</h1>
                             ))}
                         </div>
+                        <h1>High Volume</h1>
+                        <div>
+                            {TopByVolume.map((et, index) => (
+                                <h1 key={index}>{et.symbol}</h1>
+                            ))}
+                        </div>
+                        <h1>Top Gainer</h1>
+                        <div>
+                            {TopGainer.map((et, index) => (
+                                <h1 key={index}>{et.symbol}</h1>
+                            ))}
+                        </div>
+                        <h1>Top Losser</h1>
+                        <div>
+                            {TopLosser.map((et, index) => (
+                                <h1 key={index}>{et.symbol}</h1>
+                            ))}
+                        </div>
+                        
+                        
+                        
                         
                     </>
             }

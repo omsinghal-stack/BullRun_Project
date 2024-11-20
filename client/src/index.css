@@ -1,7 +1,6 @@
 *{
   padding: 0;
   margin: 0;
-  background-color: #effafe;
 }
 
 #home-navbar{
@@ -49,7 +48,7 @@
 
 /* Logo image styling */
 #login img , #signup img{
-  width: 100px; /* Adjust size as needed */
+  width: 200px; /* Adjust size as needed */
   margin-bottom: 20px;
 }
 

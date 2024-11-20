@@ -5,6 +5,7 @@ import Stats from './home_comp/Stats.jsx'
 import Pricing from './home_comp/Pricing.jsx'
 import Education from './home_comp/Education.jsx'
 import OpenAccount from './home_comp/OpenAccount.jsx'
+import Footer from './Footer.jsx';
 
 import logo from '/BullLogo.png';
 import './index.css'
@@ -28,6 +29,7 @@ const Home=()=>{
       <Pricing/>
       <Education/>
       <OpenAccount/>
+      <Footer/>
         </>
     )
 }

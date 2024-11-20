@@ -35,6 +35,36 @@ body{
 
 
 /* Card styling */
+.button{
+    padding: 10px 20px;
+    border: 2px solid #3eb4cf;
+    color: #1e6d71;
+    border-radius: 10px;
+    transition-duration: 200ms;
+    transition-property: all;
+  }
+  .button:hover{
+    background-color: #17646e;
+    color: white;
+    border-color: white;
+  }
+.sec-head{
+    /* text-align: center; */
+    padding: 1% 6%;
+    display: flex;
+    justify-content: space-between;    
+}
+.sec-head h1{
+    font-size: 30px;
+}
+.sec-container{
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 2%;
+    justify-content: space-between;
+}
 .card {
     background-color: #f9fdfe;
     border: 1px solid #ddd;

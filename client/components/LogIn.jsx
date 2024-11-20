@@ -1,5 +1,5 @@
 import '../src/index.css'
-import logo from '/bullrun_logo.png'
+import logo from '/BullLogo.png'
 import {useNavigate} from 'react-router-dom';
 const LogIn = () => {
     const navigate = useNavigate();

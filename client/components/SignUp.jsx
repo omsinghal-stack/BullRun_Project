@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import  logo from '/bullrun_logo.png'
+import  logo from '/BullLogo.png'
 import '../src/index.css'
 const SignUp=()=>{
     const navigate = useNavigate();

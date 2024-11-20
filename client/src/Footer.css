@@ -1,16 +1,19 @@
 footer {
-    background-color: rgb(240, 240, 240);
+    background-color: #d4ebf1;  
     padding: 20px 0;
+    height: 100%;
     font-family: Arial, sans-serif;
     color: #333;
   }
   
   .container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 20px;
   }
-  
+  #footer-logo{
+    height: 6vh;
+  }
   .row {
     display: flex;
     justify-content: space-between;

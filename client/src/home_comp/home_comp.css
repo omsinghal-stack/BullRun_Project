@@ -16,7 +16,10 @@
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
-
+#open_logo{
+  height: 30px;
+  align-items: center;
+}
 #hero button {
   padding: 10px 25px;
   background-color: white;
