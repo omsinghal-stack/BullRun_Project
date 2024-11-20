@@ -93,7 +93,7 @@ const Dedicated_Stock = ()=>{
                 }
              </div>
              <hr />
-                <h1>MidCap</h1>
+                <h1>MidCapse</h1>
                 <div className="sect">
                 {Mid_Cap.map((st,index)=>(
                    <h1 key={index}>{st.symbol}</h1>
