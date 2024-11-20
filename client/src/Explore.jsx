@@ -2,6 +2,7 @@ import axios from 'axios'
 import { useEffect, useState } from 'react';
 import Services from './explore_comp/Services.jsx';
 import Loading_Spinner from '../components/Loading_Spinner';
+import './Explore.css';
 
 const Explore = () => {
     const API = "https://financialmodelingprep.com/api/v3/stock/list?apikey=7tb1GX4qTBrrwWjhi0m97bdp2AVJES4g";
