@@ -2,10 +2,10 @@ import axios from 'axios'
 import { useEffect, useState } from 'react';
 import Services from './explore_comp/Services.jsx';
 import Loading_Spinner from '../components/Loading_Spinner';
-
+import './Explore.css'
 const Explore = () => {
-    const API = "https://financialmodelingprep.com/api/v3/stock/list?apikey=7tb1GX4qTBrrwWjhi0m97bdp2AVJES4g";
-    const API2 = "https://financialmodelingprep.com/api/v3/symbol/NASDAQ?apikey=7tb1GX4qTBrrwWjhi0m97bdp2AVJES4g";
+    const API = "https://financialmodelingprep.com/api/v3/stock/list?apikey=POx9PiDc9nnBzmbrjUtIVbmvLECjGQ45";
+    const API2 = "https://financialmodelingprep.com/api/v3/symbol/NASDAQ?apikey=POx9PiDc9nnBzmbrjUtIVbmvLECjGQ45";
     const [StockData, setStockData] = useState([]);
     const [EtfData, setEtfData] = useState([]);
     const [Trust, setTrust] = useState([]);
@@ -79,7 +79,7 @@ const Explore = () => {
                             <div className='card' key={index}>
                                 <h1>{st.symbol}</h1>
                                 <p>{st.name}</p>
-                                <h3>{st.price}</h3>
+                                <h3>${st.price}</h3>
                             </div>
                         ))}
                     </div>
@@ -89,7 +89,7 @@ const Explore = () => {
                             <div className='card' key={index}>
                             <h1>{etf.symbol}</h1>
                             <p>{etf.name}</p>
-                            <h3>{etf.price}</h3>
+                            <h3>${etf.price}</h3>
                         </div>
                         ))}
                     </div>

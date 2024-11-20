@@ -4,8 +4,8 @@ import Loading_Spinner from '../../components/Loading_Spinner';
 import './explore_comp.css';
 
 const Dedicated_Stock = ()=>{
-    const API = "https://financialmodelingprep.com/api/v3/stock/list?apikey=7tb1GX4qTBrrwWjhi0m97bdp2AVJES4g";
-    const API2 = "https://financialmodelingprep.com/api/v3/symbol/NASDAQ?apikey=7tb1GX4qTBrrwWjhi0m97bdp2AVJES4g";
+    const API = "https://financialmodelingprep.com/api/v3/stock/list?apikey=POx9PiDc9nnBzmbrjUtIVbmvLECjGQ45";
+    const API2 = "https://financialmodelingprep.com/api/v3/symbol/NASDAQ?apikey=POx9PiDc9nnBzmbrjUtIVbmvLECjGQ45";
     const [Mid_Cap, setMidCapData] = useState([]);
     const [Lar_Cap, setLarCapData] = useState([]);
     const [Sma_Cap, setSmaCapData] = useState([]);

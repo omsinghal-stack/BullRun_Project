@@ -4,8 +4,8 @@ import Loading_Spinner from '../../components/Loading_Spinner';
 import './explore_comp.css';
 
 const Dedicated_Etf = () => {
-    const API = "https://financialmodelingprep.com/api/v3/stock/list?apikey=7tb1GX4qTBrrwWjhi0m97bdp2AVJES4g";
-    const API2 = "https://financialmodelingprep.com/api/v3/symbol/NASDAQ?apikey=7tb1GX4qTBrrwWjhi0m97bdp2AVJES4g";
+    const API = "https://financialmodelingprep.com/api/v3/stock/list?apikey=POx9PiDc9nnBzmbrjUtIVbmvLECjGQ45";
+    const API2 = "https://financialmodelingprep.com/api/v3/symbol/NASDAQ?apikey=POx9PiDc9nnBzmbrjUtIVbmvLECjGQ45";
     const [EtfData, setEtfData] = useState([]);
     const [Loading, setLoading] = useState(true);
     const [TopByMarketCap, setTopByMarketCap] = useState([]);
@@ -15,6 +15,9 @@ const Dedicated_Etf = () => {
 
 
     const getEtfData = async () => {
+        try{
+
+        
         const res = await axios.get(API);
         const res2 = await axios.get(API2);
         const etf_filt = res.data.filter((et) => {
@@ -28,15 +31,18 @@ const Dedicated_Etf = () => {
             }
         })
         console.log(res_etf);
-        const high_mar_cap_etf = res_etf.sort((a, b) => b.marketCap - a.marketCap);
-        const high_volume_etf = res_etf.sort((a, b) => b.avgVolume - a.avgVolume);
-        const top_perform = res_etf.sort((a, b) => b.changesPercentage - a.changesPercentage);
-        const less_perform = res_etf.sort((a, b) => a.changesPercentage - b.changesPercentage);
+        const high_mar_cap_etf = [...res_etf].sort((a, b) => b.marketCap - a.marketCap);
+        const high_volume_etf = [...res_etf].sort((a, b) => b.avgVolume - a.avgVolume);
+        const top_perform = [...res_etf].sort((a, b) => b.changesPercentage - a.changesPercentage);
+        const less_perform = [...res_etf].sort((a, b) => a.changesPercentage - b.changesPercentage);
         setTopByMarketCap(high_mar_cap_etf);
         setTopByVolume(high_volume_etf);
         setTopGainer(top_perform);
         setTopLosser(less_perform);
         setLoading(false);
+        }catch(err){
+            console.log(arr);   
+        }
     }
     useEffect(() => {
         getEtfData();
@@ -49,30 +55,12 @@ const Dedicated_Etf = () => {
                     :
                     <>
                         <h1>High MarketCap</h1>
-                        <div className="sect">
+                        <div>
                             {TopByMarketCap.map((et, index) => (
                                 <h1 key={index}>{et.symbol}</h1>
                             ))}
                         </div>
-                        <h1>High Volume</h1>
-                        {
-                            TopByVolume.map((et, index) => (
-                                <h1 key={index}>{et.symbol}</h1>
-                            ))
-                        }
-                        <hr />
-                        <h1>Top Performer</h1>{
-                            TopGainer.map((et, index) => (
-                                <h1 key={index}>{et.symbol}</h1>
-                            ))
-                        }
-                        <hr />
-                        <h1>Under Performer</h1>
-                        {
-                             TopLosser.map((et,index)=>(
-                                <h1 key={index}>{et.symbol}</h1>
-                             ))
-                        }
+                        
                     </>
             }
         </>

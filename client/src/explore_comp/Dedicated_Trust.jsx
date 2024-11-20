@@ -10,7 +10,7 @@ const Dedicated_Trust = ()=>{
     const [TopLosser, setTopLosser] = useState([]);
     const getTrustData=()=>{
           const res = axios.get(API);
-        //   const res =
+          const res2 = axios.get(API2);
     }
     useEffect(()=>{
              getTrustData();
