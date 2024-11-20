@@ -1,5 +1,38 @@
-.sect{
-    height: 200px;
-    overflow: scroll;
-    width: 200px;
-}
+.service {
+    padding: 20px;
+    margin:15px;
+    color: #007bff;
+    display:grid;
+    text-align: center;
+  }
+  .service h1{
+    margin-bottom: 30px;
+  }
+
+  .card1{
+    display: flex;
+      justify-content: center;
+      gap: 60px;
+  }
+    .services{
+        width: 200px;
+        height: 150px;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #f9fdfe;;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        /* justify-content: center; */
+        font-size: 18px;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .services img{
+        height: 90px;
+        margin: 10px;
+    }
